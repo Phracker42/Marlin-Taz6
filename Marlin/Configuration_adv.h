@@ -1121,16 +1121,16 @@
  * Enable DISABLE_INACTIVE_* to shut down axis steppers after an idle period.
  * The Deactive Time can be overridden with M18 and M84. Set to 0 for No Timeout.
  */
-#define DEFAULT_STEPPER_DEACTIVE_TIME 600
+#define DEFAULT_STEPPER_DEACTIVE_TIME 120
 #define DISABLE_INACTIVE_X
 #define DISABLE_INACTIVE_Y
 #define DISABLE_INACTIVE_Z  // Disable if the nozzle could fall onto your printed part!
-#define DISABLE_INACTIVE_I
-#define DISABLE_INACTIVE_J
-#define DISABLE_INACTIVE_K
-#define DISABLE_INACTIVE_U
-#define DISABLE_INACTIVE_V
-#define DISABLE_INACTIVE_W
+//#define DISABLE_INACTIVE_I
+//#define DISABLE_INACTIVE_J
+//#define DISABLE_INACTIVE_K
+//#define DISABLE_INACTIVE_U
+//#define DISABLE_INACTIVE_V
+//#define DISABLE_INACTIVE_W
 
 // Default Minimum Feedrates for printing and travel moves
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // (mm/s. °/s for rotational-only moves) Minimum feedrate. Set with M205 S.
@@ -2329,7 +2329,7 @@
 #endif
 
 // Moves (or segments) with fewer steps than this will be joined with the next move
-#define MIN_STEPS_PER_SEGMENT 1
+#define MIN_STEPS_PER_SEGMENT 6
 
 /**
  * Minimum delay before and after setting the stepper DIR (in ns)
@@ -2358,7 +2358,7 @@
  *
  * Override the default value based on the driver type set in Configuration.h.
  */
-#define MINIMUM_STEPPER_PULSE 1
+//#define MINIMUM_STEPPER_PULSE 2
 
 /**
  * Maximum stepping rate (in Hz) the stepper driver allows
@@ -2647,7 +2647,7 @@
  *
  * Enable PARK_HEAD_ON_PAUSE to add the G-code M125 Pause and Park.
  */
-#define ADVANCED_PAUSE_FEATURE
+//#define ADVANCED_PAUSE_FEATURE
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         10  // (mm/s) Initial retract feedrate.
   #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
